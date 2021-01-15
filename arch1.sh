@@ -21,6 +21,9 @@ timedatectl set-ntp true
 echo 'Ваша разметка диска'
 fdisk -l
 
+pacman -Sy
+pacman -S btrfs-progs --noconfirm
+
 echo '2.4.2 Форматирование дисков'
 mkfs.btrfs  /dev/sda1
 mkfs.btrfs  /dev/sdb2
