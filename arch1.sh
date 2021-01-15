@@ -26,7 +26,7 @@ pacman -S btrfs-progs --noconfirm
 
 echo '2.4.2 Форматирование дисков'
 mkfs.btrfs -f /dev/sda1
-mkfs.btrfs -f /dev/sdb1`
+mkfs.btrfs -f /dev/sdb1
 
 echo 'Создаем подтома:'
 mount /dev/sda1 /mnt
