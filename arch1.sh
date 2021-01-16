@@ -55,4 +55,3 @@ genfstab -pU /mnt >> /mnt/etc/fstab
 arch-chroot /mnt sh -c "$(curl -fsSL git.io/JtTvj)"
 
 curl -L git.io/JtTvj > arch2.sh
-umo
