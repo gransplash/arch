@@ -39,7 +39,7 @@ umount /mnt
 echo '2.4.3 Монтирование дисков'
 mount -o subvol=sv_root,compress=lzo,autodefrag /dev/sda1 /mnt
 mkdir /mnt/home
-mount -o subvol=sv_home,compress=lzo,autodefrag /dev/sdb1 /mnt/home\
+mount -o subvol=sv_home,compress=lzo,autodefrag /dev/sdb1 /mnt/home
 mkdir /mnt/snapshots
 mount -o subvol=sv_snapshots_root,compress=lzo,autodefrag /dev/sda1 /mnt/snapshots
 
