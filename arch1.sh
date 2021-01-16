@@ -39,7 +39,7 @@ umount /mnt
 echo '2.4.3 Монтирование дисков'
 mount -o subvol=sv_root,compress=lzo,autodefrag /dev/sda1 /mnt
 mkdir /mnt/home
-mount -o subvol=sv_home,compress=lzo,autodefrag /dev/sdb1 /mnt/home\
+mount t-o subvol=sv_home,compress=lzo,autodefrag /dev/sdb1 /mnt/home\
 mkdir /mnt/snapshots
 mount -o subvol=sv_snapshots_root,compress=lzo,autodefrag /dev/sda1 /mnt/snapshots
 
@@ -52,4 +52,6 @@ pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd netctl
 echo '3.3 Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -L git.io/JtTvj > arch2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL git.io/JtTvj)"
+
+curl -L git.io/JtTvj > arch2.sh
